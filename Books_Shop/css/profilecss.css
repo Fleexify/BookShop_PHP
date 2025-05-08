@@ -1,0 +1,91 @@
+.user-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Card cover styles */
+  .card-cover {
+    margin-bottom: 2rem;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .profout{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+    border-radius: 4px;
+    width: 150px;
+    cursor: pointer;
+  }
+  /* Avatar wrapper - positioned relative to contain the absolutely positioned avatar */
+  .avatar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  /* Avatar styling */
+  .avatar {
+    position: relative;
+    background-color: rgba(169, 169, 169, 0.5); /* Light mode */
+    padding: 0.5rem;
+    background-color: rgba(97, 97, 97, 0.5); /* Dark mode */
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .avatar-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white; /* Optional, adds a border for visual emphasis */
+  }
+  
+  /* Card body styling */
+  .card-body {
+    padding: 1.25rem;
+    text-align: center;
+    flex-grow: 1;
+    z-index: 5;
+    position: relative;
+  }
+  
+  /* Card name styling */
+  .card-name {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  /* Card information styling */
+  .card-info {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+  }
+  
+  /* Dark mode styles */
+  body {
+    background-color: #1f2937;
+    color: #e5e7eb;
+  }
+  
+  body.dark-mode .user-card {
+    background-color: #2d3748;
+  }
+  
+  body.dark-mode .card-info {
+    color: #cbd5e0;
+  }
